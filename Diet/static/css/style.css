@@ -1,0 +1,177 @@
+
+.h1 {
+font-weight: 900; 
+margin-top: 200px;
+font-style:bold;
+background-color: white;
+border-style:solid;
+border-width: 2px;
+border-radius: 5px;
+text-align: center;
+
+
+
+}
+
+span {
+
+}
+
+.own {
+
+margin-top: 50px;
+width: 350px;
+height: 350px;
+position: relative;
+
+}
+
+
+
+
+
+
+
+
+
+.details {
+
+margin-top: 80px;
+padding-top: 30px;
+padding-bottom: 25px;
+background-color:   rgba(128, 128, 128, 0.7);
+
+}
+
+
+
+
+  
+
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 25px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
+
+}
+
+
+
+.imge {
+
+  opacity: 1;
+
+}
+
+.y {
+
+
+  background-color: white;
+  background-image: url('images/bell-pepper-1302126_1920.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+
+.data {
+
+margin-top: 140px;
+margin-left: 500px;
+margin-right: 500px;
+
+
+  }
+
+#table {
+
+  border-style: double;
+}
+
+
+.jumbotron {
+  background-color:  rgba(128, 128, 128, 0.4);
+  margin-right: -79px;
+  
+}
+
+
+#col1 {
+
+ 
+  color: black;
+  margin-top: 200px;
+ 
+  
+
+}
+
+
+#col2 {
+
+  margin-top: 80px;
+
+  
+  
+}
+
+#row {
+  background-image: url('images/writing-pad-3193199_1920.jpg');
+  background-size: cover;
+  
+  background-attachment: scroll;
+  padding-bottom: 69px;
+ 
+
+}
+
+
+#age {
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+#weight {
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+
+#deficiency {
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-info {
+  margin-left: 50px;
+}

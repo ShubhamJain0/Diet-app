@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{%  load static %}
+
+{% block content %}
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	$('.own').on('mouseover', function(){
+
+		$('span').css('color', 'white')
+		$('span').html('<h1>know your diet!</h1>')
+		$('span').css('font-family', 'Courgette')
+		$('span').css('background-color', 'red')
+		$('img').css('box-shadow', '3px 3px 5px 2px  #011')
+		
+
+	});
+
+	$('.own').on('mouseout', function(){
+
+		$('span').html('')
+		$('img').css('box-shadow', '')
+		
+	});
+
+	function own(){
+
+		$current = $('.own img.imge');
+
+		if($current.length==0){
+			$('.own img:first-child').addClass('imge');
+		}else{
+			$next = $current.removeClass('imge').next();
+			if($next.length==0){
+				$('.own img:first-child').addClass('imge');
+			}else{
+				$next.addClass('imge');
+			}
+		}
+	}
+
+	setInterval(own, 3000);
+});
+
+
+
+
+
+
+</script>
+
+<body class="y">
+
+	<div class="jumbotron"></div>
+
+<div class="container">
+	<div class="row">
+	<div class="col-xs-6 col-md-6" >
+		<div class='own'>
+			<a href="/details/"><img src="{% static 'css/images/images.jpg' %}"  class="imge">
+								<img src="{% static 'css/images/apple-series-1325738.jpg' %}">
+
+
+
+				</a>
+
+		</div>
+		<span></span>
+	</div>
+		<div class="col-xs-6 col-md-6">
+			<h1 class="h1">Contact your dietition</h1>
+			
+		</div>
+
+	</div>
+
+
+</div>
+
+<footer>
+	
+</footer>
+
+</body>
+
+
+
+
+{% endblock %}

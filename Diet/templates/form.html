@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$('.btn-info').on('mouseover', function(){
+
+	$('.btn-info').css('background-color', 'green')
+	});
+
+	$('.btn-info').on('mouseout', function(){
+
+		$('.btn-info').css('background-color', '')
+	});
+
+	$('button').eq(0).on('click', function(){
+
+		$('button').eq(0).css('color', 'white')
+		$('button').eq(0).css('background-color', 'blue')
+		$('button').eq(1).css('background-color', '')
+		$('button').eq(1).css('color', '')
+		$('button').eq(2).css('background-color', '')
+		$('button').eq(2).css('color', '')
+		$('button').eq(3).css('background-color', '')
+		$('button').eq(3).css('color', '')
+		$('button').eq(4).css('background-color', '')
+		$('button').eq(4).css('color', '')
+		$('p').text('ghsd sdsdsdsd')
+		$('h1').text('Diet: ')
+		
+	});
+
+	$('button').eq(1).on('click', function(){
+		
+		$('button').eq(1).css('color', 'white')
+		$('button').eq(1).css('background-color', 'blue')
+		$('button').eq(0).css('background-color', '')
+		$('button').eq(0).css('color', '')
+		$('button').eq(2).css('background-color', '')
+		$('button').eq(2).css('color', '')
+		$('button').eq(3).css('background-color', '')
+		$('button').eq(3).css('color', '')
+		$('button').eq(4).css('background-color', '')
+		$('button').eq(4).css('color', '')
+		$('p').text('drt')
+		$('h1').text('on: ')
+	});
+
+	$('button').eq(2).on('click', function(){
+
+		$('button').eq(2).css('color', 'white')
+		$('button').eq(2).css('background-color', 'blue')
+		$('button').eq(0).css('background-color', '')
+		$('button').eq(0).css('color', '')
+		$('button').eq(1).css('background-color', '')
+		$('button').eq(1).css('color', '')
+		$('button').eq(3).css('background-color', '')
+		$('button').eq(3).css('color', '')
+		$('button').eq(4).css('background-color', '')
+		$('button').eq(4).css('color', '')
+		$('p').text('ghsd sdsdsdsd')
+		$('h1').text('Di: ')
+	});
+
+	$('button').eq(3).on('click', function(){
+
+		$('button').eq(3).css('color', 'white')
+		$('button').eq(3).css('background-color', 'blue')
+		$('button').eq(0).css('background-color', '')
+		$('button').eq(0).css('color', '')
+		$('button').eq(1).css('background-color', '')
+		$('button').eq(1).css('color', '')
+		$('button').eq(2).css('background-color', '')
+		$('button').eq(2).css('color', '')
+		$('button').eq(4).css('background-color', '')
+		$('button').eq(4).css('color', '')
+		
+	});
+
+	$('button').eq(4).on('click', function(){
+
+		$('button').eq(4).css('color', 'white')
+		$('button').eq(4).css('background-color', 'blue')
+		$('button').eq(0).css('background-color', '')
+		$('button').eq(0).css('color', '')
+		$('button').eq(1).css('background-color', '')
+		$('button').eq(1).css('color', '')
+		$('button').eq(2).css('background-color', '')
+		$('button').eq(2).css('color', '')
+		$('button').eq(3).css('background-color', '')
+		$('button').eq(3).css('color', '')
+		
+	});
+});	
+
+
+
+</script>
+
+<div class="row" id="row">
+
+	<div class="col-lg-5 col-sm-6" id="col1">
+		<h1>Diet: </h1>
+		<p>
+			ghsd sdsdsdsd
+		</p>
+		<button type="button" class="btn btn-outline-primary btn-lg" onclick="this.blur();">1</button>
+		<button type="button" class="btn btn-outline-primary btn-lg" onclick="this.blur();">2</button>
+		<button type="button" class="btn btn-outline-primary btn-lg" onclick="this.blur();">3</button>
+		<button type="button" class="btn btn-outline-primary btn-lg" onclick="this.blur();">4</button>
+		<button type="button" class="btn btn-outline-primary btn-lg" onclick="this.blur();">5</button>
+
+
+	</div>
+	
+
+	<div class="col-lg-2"></div>
+	
+	<div class="col-lg-4 col-sm-6" id="col2">
+
+
+
+		<form method="POST" action="/data/" class="details">{% csrf_token %}
+		<h3>Please fill the details below!</h3><br><br>
+		<div id="age">Age: <input type="text" name="q"   required="" pattern="\d+" />(required)</div><br><br>
+		<div id="weight">Weight: <input type="text" name="" pattern="\d+"/></div><br><br>
+		<div id="deficiency">Deficiency: <select>
+			<option >None</option>
+			<option>Diabetes</option>
+			<option>Vitamin Deficiency</option>
+		
+
+
+
+		</select><br><br><br></div>
+
+
+
+		<input type="submit" value="Search"  class="btn btn-info" onclick="this.blur();" />
+	</form></div>
+
+
+</div>
+
+
+{% endblock %}
